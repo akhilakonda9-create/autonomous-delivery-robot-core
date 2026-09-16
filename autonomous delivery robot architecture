@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous Delivery Robot Architecture | Technical Showcase</title>
+  <meta name="description" content="An interactive, high-fidelity exploration of self-driving delivery robot systems, sensors, architecture, navigation loops, and working processes.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <!-- Background Blur Blobs -->
+  <div class="gradient-blob blob-cyan"></div>
+  <div class="gradient-blob blob-blue"></div>
+  <div class="gradient-blob blob-purple"></div>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="8" width="20" height="12" rx="2" ry="2" />
+          <path d="M7 8V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3" />
+          <circle cx="8" cy="14" r="1.5" />
+          <circle cx="16" cy="14" r="1.5" />
+        </svg>
+        <div class="logo-text">Aegis<span>Bot</span></div>
+      </a>
+
+       <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+        <li><a href="#architecture" class="nav-link" data-page="architecture">Architecture</a></li>
+        <li><a href="#sensors" class="nav-link" data-page="sensors">Sensors</a></li>
+        <li><a href="#navigation" class="nav-link" data-page="navigation">Navigation</a></li>
+        <li><a href="#process" class="nav-link" data-page="process">Working Process</a></li>
+        <li><a href="#advantages" class="nav-link" data-page="advantages">Advantages</a></li>
+        <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <!-- Main Content Areas (SPA Sections) -->
+  <main>
+    <!-- SECTION 1: HOME -->
+    <section id="home" class="page-section active">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-pulse"></span>
+            Next-Gen Autonomous Mobility
+            </div>
+          <h1 class="hero-title">Engineering the Future of <span>Last-Mile Delivery</span></h1>
+          <p class="hero-desc">
+            Explore the advanced engineering behind autonomous delivery robots. Discover the modular hardware architecture, sensor fusion networks, SLAM navigation pipelines, and dynamic safety systems that power next-generation logistics.
+          </p>
+          <div class="hero-actions">
+            <a href="#architecture" class="btn btn-primary nav-action-btn" data-target="architecture">
+              Explore Architecture
+              <svg class="btn-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#process" class="btn btn-secondary nav-action-btn" data-target="process">
+              Watch Simulator
+              <svg class="btn-icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-val">99.8%</span>
+              <span class="stat-label">Obstacle Avoidance</span>
+                </div>
+            <div class="stat-item">
+              <span class="stat-val">&lt; 5cm</span>
+              <span class="stat-label">SLAM Accuracy</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">12 Hrs</span>
+              <span class="stat-label">Active Drive Time</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="canvas-frame">
+            <div style="position: absolute; width:100%; height:100%; display:flex; justify-content:center; align-items:center;">
+              <div class="robot-graphic">
+                <div class="robot-shadow"></div>
+                <div class="robot-lidar">
+                  <div class="robot-lidar-beam"></div>
+                </div>
+                <div class="robot-head">
+                  <div class="robot-eye">
+                    <div class="robot-eye-glass"></div>
+                  </div>
+                  </div>
+                <div class="robot-neck"></div>
+                <div class="robot-base"></div>
+                <div class="robot-wheel wheel-left"></div>
+                <div class="robot-wheel wheel-right"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION 2: ROBOT ARCHITECTURE -->
+    <section id="architecture" class="page-section">
+      <div class="section-header">
+        <span class="section-tag">System Stack</span>
+        <h2 class="section-title">Modular Hardware Architecture</h2>
+        <p class="section-desc">A highly robust, multi-tiered framework designed for failsafe operational security, modular component swaps, and high-performance robotic computing.</p>
+      </div>
+                    <h3>Perception & Sensor Layer</h3>
+              <p>Active LiDAR telemetry, stereo computer vision, and sonar array networks.</p>
+            </div>
+          </div>
+          <div class="stack-layer layer-middle" data-layer="compute">
+            <div class="layer-num">02</div>
+            <svg class="layer-icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            <div class="layer-info">
+              <h3>Compute & Decision Engine</h3>
+              <p>On-board neural processors running localization algorithms, A* pathfinders, and safety matrices.</p>
+            </div>
+          </div>
+          <div class="stack-layer layer-bottom" data-layer="actuation">
+            <div class="layer-num">03</div>
+            <svg class="layer-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <div class="layer-info">
+              <h3>Actuation & Chassis Layer</h3>
+              <p>Brushless hub motors, smart battery management system, and lockable cargo hatch.</p>
+            </div>
+          </div>
+        </div>
+                    <div class="hotspot spot-sonar" data-sensor="sonar"><span>3</span></div>
+            <div class="hotspot spot-imu" data-sensor="imu"><span>4</span></div>
+            <div class="hotspot spot-drivetrain" data-sensor="drivetrain"><span>5</span></div>
+            <div class="hotspot spot-battery" data-sensor="battery"><span>6</span></div>
+          </div>
+        </div>
+        <!-- Sensor Specifications and Live Widget -->
+        <div class="sensor-info-panel">
+          <div class="glass-card">
+            <h3 id="sensor-name">Solid-State LiDAR</h3>
+            <p id="sensor-description">Generates high-density 3D point clouds mapping the robot's surrounding environment up to 100 meters, operating reliably in direct sunlight or heavy shadow.</p>
+            
+            <div class="sensor-specs">
+              <div class="spec-box">
+                <div class="spec-title">Interface Type</div>
+                <div class="spec-value" id="sensor-interface">Ethernet / ROS2</div>
+              </div>
+              <div class="spec-box">
+                <div class="spec-title">Power Consumption</div>
+                <div class="spec-value" id="sensor-power">14W (Average)</div>
+              </div>
+              <div class="spec-box">
+                <div class="spec-title">FOV / Range</div>
+                <div class="spec-value" id="sensor-fov">360° × 45° / 120m</div>
+              </div>
+              <div class="spec-box">
+                <div class="spec-title">Update Frequency</div>
+                <div class="spec-value" id="sensor-frequency">20 Hz</div>
+              </div>
+            </div>
+              <h3>1. Task Allocation & Loading <span>Step 1</span></h3>
+              <p>Robot calculates delivery sequence at Distribution Hub, evaluating payload coordinates and verifying battery safety margins.</p>
+            </div>
+          </div>
+          <div class="timeline-step" data-step="1">
+            <div class="step-indicator"></div>
+            <div class="step-content">
+              <h3>2. Global Path Planning <span>Step 2</span></h3>
+              <p>The A* algorithm maps the shortest navigation grid route from the Hub (blue node) to the destination coordinates (green node).</p>
+            </div>
+          </div>
+          <div class="timeline-step" data-step="2">
+            <div class="step-indicator"></div>
+            <div class="step-content">
+              <h3>3. Transit & Local Avoidance <span>Step 3</span></h3>
+              <p>Robot advances along grid roads. Upon encountering static/dynamic roadblocks, it halts and re-plots routes on the fly.</p>
+            </div>
+          </div>
+          <div class="timeline-step" data-step="3">
+            <div class="step-indicator"></div>
+            <div class="step-content">
+              <h3>4. Verification & Drop-off <span>Step 4</span></h3>
+              <p>Upon arriving at target address, customer is notified. Compartment door unlocks after successful digital authentication.</p>
+            </div>
+          </div>
+          <div class="timeline-step" data-step="4">
+            <div class="step-indicator"></div>
+            <div class="step-content">
+              <h3>5. Safe Return to Base <span>Step 5</span></h3>
+              <p>With task completed, the robot maps its route back to the recharging bay to replenish cells for next dispatch.</p>
+                        </a>
+          <a href="#" class="social-link" title="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.41 19c1.71.46 8.59.46 8.59.46s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Platform Stack</h3>
+        <ul>
+          <li><a href="#architecture" class="nav-action-btn" data-target="architecture">System Architecture</a></li>
+          <li><a href="#sensors" class="nav-action-btn" data-target="sensors">Sensory Suite</a></li>
+          <li><a href="#navigation" class="nav-action-btn" data-target="navigation">SLAM & Controls</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#process" class="nav-action-btn" data-target="process">Simulation Sandbox</a></li>
+          <li><a href="#advantages" class="nav-action-btn" data-target="advantages">Applications & Values</a></li>
+          <li><a href="#contact" class="nav-action-btn" data-target="contact">Collab Inquiry</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Aegis Robotics Systems. All rights reserved.</p>
+      <p>Designed for Open Source Dissemination</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
